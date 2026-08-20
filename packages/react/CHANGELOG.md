@@ -1,5 +1,38 @@
 # @ark-ui/react
 
+## [5.39.0] - 2026-08-20
+
+### Added
+
+- **Toc** [New]: Add a table of contents component that tracks which headings are in view as the reader scrolls. Pass
+  the headings to `Toc.Root` as `items`, where each entry needs the heading element's `id` as `value` and its level as
+  `depth`. Set `scrollEl` when the content scrolls inside a container rather than the page, so tracking observes that
+  element instead of the viewport.
+  ```tsx
+  <Toc.Root items={items} scrollEl={() => contentRef.current}>
+    <Toc.Content />
+    <Toc.Nav>
+      <Toc.Title />
+      <Toc.List>
+        <Toc.Indicator />
+        <Toc.Item item={item}>
+          <Toc.Link />
+        </Toc.Item>
+      </Toc.List>
+    </Toc.Nav>
+  </Toc.Root>
+  ```
+  More than one heading can be active at once, so `Toc.Item` carries `data-first` and `data-last` to mark the ends of
+  the range, and `Toc.Indicator` spans it. Use `useToc` with `Toc.RootProvider` to reach `activeItems` and `scrollTo`
+  from outside the tree. The API may still change while the component is in preview.
+
+### Fixed
+
+- Fix `asChild` rendering nothing when the child crosses the React Server Components boundary. React's Flight protocol
+  can hand the child over wrapped in `Symbol(react.lazy)`, which `isValidElement` rejects, so the factory bailed out and
+  rendered neither the child nor the element it stood in for. The lazy child is now unwrapped before its props are
+  merged.
+
 ## [5.38.2] - 2026-08-17
 
 ### Fixed
