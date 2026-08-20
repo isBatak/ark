@@ -61,7 +61,16 @@ const nextConfig = {
         permanent: false,
       },
       {
-        source: '/:framework/docs/:slug*',
+        // llms-full.txt duplicated every page across all four frameworks and
+        // outgrew Vercel's 20MB prerender cap. The per-framework files carry
+        // the same content, scoped.
+        source: '/llms-full.txt',
+        destination: '/llms.txt',
+        permanent: false,
+      },
+      {
+        // Exclude `api` so /api/docs* is not treated as a framework docs path.
+        source: '/:framework((?!api)[^/]+)/docs/:slug*',
         destination: '/docs/:slug*',
         permanent: false,
       },

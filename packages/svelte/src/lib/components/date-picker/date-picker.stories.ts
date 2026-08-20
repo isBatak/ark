@@ -16,7 +16,14 @@ import RootProviderExample from './examples/root-provider.svelte'
 import TriggerValueExample from './examples/trigger-value.svelte'
 import UnavailableExample from './examples/unavailable.svelte'
 import WithTimeExample from './examples/with-time.svelte'
+import OpenOnClickExample from './examples/open-on-click.svelte'
+import WeekNumbersExample from './examples/week-numbers.svelte'
 import YearPickerExample from './examples/year-picker.svelte'
+import SelectTodayExample from './examples/select-today.svelte'
+import FixedWeeksExample from './examples/fixed-weeks.svelte'
+import FormExample from './examples/form.svelte'
+import MaxSelectedDatesExample from './examples/max-selected-dates.svelte'
+import CustomCalendarExample from './examples/custom-calendar.svelte'
 
 const meta: Meta = {
   title: 'Components / DatePicker',
@@ -126,8 +133,50 @@ export const WithTime = {
   }),
 }
 
+export const OpenOnClick = {
+  render: () => ({
+    Component: OpenOnClickExample,
+  }),
+}
+
+export const WeekNumbers = {
+  render: () => ({
+    Component: WeekNumbersExample,
+  }),
+}
+
 export const YearPicker = {
   render: () => ({
     Component: YearPickerExample,
+  }),
+}
+
+export const SelectToday = {
+  render: () => ({
+    Component: SelectTodayExample,
+  }),
+}
+
+export const FixedWeeks = {
+  render: () => ({
+    Component: FixedWeeksExample,
+  }),
+}
+
+export const Form = {
+  render: () => ({
+    Component: FormExample,
+  }),
+}
+
+export const MaxSelectedDates = {
+  render: () => ({
+    Component: MaxSelectedDatesExample,
+  }),
+}
+
+export const CustomCalendar = {
+  render: () => ({
+    Component: CustomCalendarExample,
   }),
 }

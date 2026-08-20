@@ -1,6 +1,8 @@
-import { useControllableState } from '../../utils/use-controllable-state'
-import { useEvent } from '../../utils/use-event'
-import { useFieldsetContext } from '../fieldset'
+'use client'
+
+import { useControllableState } from '../../utils/use-controllable-state.ts'
+import { useEvent } from '../../utils/use-event.ts'
+import { useFieldsetContext } from '../fieldset/index.ts'
 
 export interface UseCheckboxGroupProps {
   /**
@@ -32,6 +34,10 @@ export interface UseCheckboxGroupProps {
    * If `true`, the checkbox group is invalid
    */
   invalid?: boolean | undefined
+  /**
+   * The maximum number of selected values
+   */
+  maxSelectedValues?: number | undefined
 }
 
 export interface CheckboxGroupItemProps {
@@ -48,6 +54,7 @@ export function useCheckboxGroup(props: UseCheckboxGroupProps = {}) {
     readOnly,
     name,
     invalid = fieldset?.invalid,
+    maxSelectedValues,
   } = props
 
   const interactive = !(disabled || readOnly)
@@ -68,9 +75,12 @@ export function useCheckboxGroup(props: UseCheckboxGroupProps = {}) {
     isChecked(val) ? removeValue(val) : addValue(val)
   }
 
+  const isAtMax = maxSelectedValues != null && value.length >= maxSelectedValues
+
   const addValue = (val: string) => {
     if (!interactive) return
     if (isChecked(val)) return
+    if (isAtMax) return
     setValue(value.concat(val))
   }
 
@@ -80,15 +90,16 @@ export function useCheckboxGroup(props: UseCheckboxGroupProps = {}) {
   }
 
   const getItemProps = (props: CheckboxGroupItemProps) => {
+    const checked = props.value != null ? isChecked(props.value) : undefined
     return {
-      checked: props.value != null ? isChecked(props.value) : undefined,
+      checked,
       onCheckedChange() {
         if (props.value != null) {
           toggleValue(props.value)
         }
       },
       name,
-      disabled,
+      disabled: disabled || (isAtMax && !checked),
       readOnly,
       invalid,
     }

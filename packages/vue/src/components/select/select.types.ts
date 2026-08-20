@@ -1,7 +1,11 @@
 import type * as select from '@zag-js/select'
-import type { CollectionItem, ListCollection } from '../collection'
+import type { CollectionItem, ListCollection } from '../collection/index.ts'
 
 export interface RootProps<T extends CollectionItem> {
+  /**
+   * The autocomplete attribute for the hidden select. Enables browser autofill (e.g. "address-level1" for state).
+   */
+  autoComplete?: string
   /**
    * Whether the select should close after an item is selected
    * @default true
@@ -109,6 +113,10 @@ export interface RootProps<T extends CollectionItem> {
    * Function to scroll to a specific index
    */
   scrollToIndexFn?: (details: select.ScrollToIndexDetails) => void
+  /**
+   * Specifies the localized strings that identifies the accessibility elements and their states
+   */
+  translations?: select.IntlTranslations
 }
 
 export type RootEmits<T extends CollectionItem> = {

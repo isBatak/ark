@@ -1,7 +1,7 @@
 import type { Accessor } from '$lib/types'
 import { type MaybeFunction, runIfFn } from '@zag-js/utils'
 import { untrack } from 'svelte'
-import { useFieldsetContext } from '../fieldset'
+import { useFieldsetContext } from '../fieldset/index.ts'
 
 export interface UseCheckboxGroupProps {
   /**
@@ -33,6 +33,10 @@ export interface UseCheckboxGroupProps {
    * If `true`, the checkbox group is invalid
    */
   invalid?: boolean
+  /**
+   * The maximum number of selected values
+   */
+  maxSelectedValues?: number
 }
 
 export interface CheckboxGroupItemProps {
@@ -67,9 +71,12 @@ export const useCheckboxGroup = (props: MaybeFunction<UseCheckboxGroupProps> = {
     isChecked(val) ? removeValue(val) : addValue(val)
   }
 
+  const isAtMax = $derived(resolvedProps.maxSelectedValues != null && value.length >= resolvedProps.maxSelectedValues)
+
   const addValue = (val: string) => {
     if (!interactive) return
     if (isChecked(val)) return
+    if (isAtMax) return
     setValue(value.concat(val))
   }
 
@@ -79,15 +86,16 @@ export const useCheckboxGroup = (props: MaybeFunction<UseCheckboxGroupProps> = {
   }
 
   const getItemProps = (itemProps: CheckboxGroupItemProps) => {
+    const checked = itemProps.value != null ? isChecked(itemProps.value) : undefined
     return {
-      checked: itemProps.value != null ? isChecked(itemProps.value) : undefined,
+      checked,
       onCheckedChange() {
         if (itemProps.value != null) {
           toggleValue(itemProps.value)
         }
       },
       name: resolvedProps.name,
-      disabled: !!disabled,
+      disabled: !!disabled || (isAtMax && !checked),
       readOnly: !!resolvedProps.readOnly,
       invalid: !!invalid,
     }

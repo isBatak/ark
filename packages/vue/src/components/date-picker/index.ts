@@ -1,10 +1,14 @@
 export { parse as parseDate } from '@zag-js/date-picker'
 export type {
+  DateRangePreset as DatePickerDateRangePreset,
   DateValue,
+  DateView as DatePickerDateView,
   FocusChangeDetails as DatePickerFocusChangeDetails,
   OpenChangeDetails as DatePickerOpenChangeDetails,
+  SelectionMode as DatePickerSelectionMode,
   ValueChangeDetails as DatePickerValueChangeDetails,
   ViewChangeDetails as DatePickerViewChangeDetails,
+  VisibleRangeChangeDetails as DatePickerVisibleRangeChangeDetails,
 } from '@zag-js/date-picker'
 export {
   default as DatePickerClearTrigger,
@@ -136,12 +140,22 @@ export {
   type DatePickerViewProps,
 } from './date-picker-view.vue'
 export {
+  default as DatePickerWeekNumberHeaderCell,
+  type DatePickerWeekNumberHeaderCellBaseProps,
+  type DatePickerWeekNumberHeaderCellProps,
+} from './date-picker-week-number-header-cell.vue'
+export {
+  default as DatePickerWeekNumberCell,
+  type DatePickerWeekNumberCellBaseProps,
+  type DatePickerWeekNumberCellProps,
+} from './date-picker-week-number-cell.vue'
+export {
   default as DatePickerYearSelect,
   type DatePickerYearSelectBaseProps,
   type DatePickerYearSelectProps,
 } from './date-picker-year-select.vue'
-export { datePickerAnatomy } from './date-picker.anatomy'
-export { useDatePicker, type UseDatePickerProps, type UseDatePickerReturn } from './use-date-picker'
-export { useDatePickerContext, type UseDatePickerContext } from './use-date-picker-context'
+export { datePickerAnatomy } from './date-picker.anatomy.ts'
+export { useDatePicker, type UseDatePickerProps, type UseDatePickerReturn } from './use-date-picker.ts'
+export { useDatePickerContext, type UseDatePickerContext } from './use-date-picker-context.ts'
 
-export * as DatePicker from './date-picker'
+export * as DatePicker from './date-picker.ts'

@@ -30,6 +30,7 @@
   const [useDatePickerProps, localProps] = $derived(
     createSplitProps<UseDatePickerProps>()(datePickerProps, [
       'closeOnSelect',
+      'createCalendar',
       'defaultFocusedValue',
       'defaultOpen',
       'defaultValue',
@@ -45,6 +46,7 @@
       'isDateUnavailable',
       'locale',
       'max',
+      'maxSelectedDates',
       'maxView',
       'min',
       'minView',
@@ -56,6 +58,7 @@
       'onViewChange',
       'onVisibleRangeChange',
       'open',
+      'openOnClick',
       'outsideDaySelectable',
       'parse',
       'placeholder',
@@ -63,6 +66,7 @@
       'readOnly',
       'required',
       'selectionMode',
+      'showWeekNumbers',
       'startOfWeek',
       'timeZone',
       'translations',

@@ -26,14 +26,6 @@ import * as Avatar_Context from '@examples/avatar/examples/context'
 import * as Avatar_Events from '@examples/avatar/examples/events'
 import * as Avatar_Provider from '@examples/avatar/examples/provider'
 import * as Avatar_RootProvider from '@examples/avatar/examples/root-provider'
-import * as BottomSheet_Basic from '@examples/bottom-sheet/examples/basic'
-import * as BottomSheet_Controlled from '@examples/bottom-sheet/examples/controlled'
-import * as BottomSheet_Modal from '@examples/bottom-sheet/examples/modal'
-import * as BottomSheet_NoDragArea from '@examples/bottom-sheet/examples/no-drag-area'
-import * as BottomSheet_NonDraggable from '@examples/bottom-sheet/examples/non-draggable'
-import * as BottomSheet_RootProvider from '@examples/bottom-sheet/examples/root-provider'
-import * as BottomSheet_Scrollable from '@examples/bottom-sheet/examples/scrollable'
-import * as BottomSheet_SnapPoints from '@examples/bottom-sheet/examples/snap-points'
 import * as Carousel_Autoplay from '@examples/carousel/examples/autoplay'
 import * as Carousel_Basic from '@examples/carousel/examples/basic'
 import * as Carousel_Controlled from '@examples/carousel/examples/controlled'
@@ -56,6 +48,7 @@ import * as Checkbox_GroupProvider from '@examples/checkbox/examples/group-provi
 import * as Checkbox_GroupWithFieldset from '@examples/checkbox/examples/group-with-fieldset'
 import * as Checkbox_GroupWithForm from '@examples/checkbox/examples/group-with-form'
 import * as Checkbox_GroupWithInvalid from '@examples/checkbox/examples/group-with-invalid'
+import * as Checkbox_GroupWithMaxSelected from '@examples/checkbox/examples/group-with-max-selected'
 import * as Checkbox_GroupWithSelectAll from '@examples/checkbox/examples/group-with-select-all'
 import * as Checkbox_Group from '@examples/checkbox/examples/group'
 import * as Checkbox_Indeterminate from '@examples/checkbox/examples/indeterminate'
@@ -73,6 +66,7 @@ import * as Clipboard_Timeout from '@examples/clipboard/examples/timeout'
 import * as Clipboard_ValueText from '@examples/clipboard/examples/value-text'
 import * as Collapsible_Basic from '@examples/collapsible/examples/basic'
 import * as Collapsible_Disabled from '@examples/collapsible/examples/disabled'
+import * as Collapsible_HideMode from '@examples/collapsible/examples/hide-mode'
 import * as Collapsible_InitialOpen from '@examples/collapsible/examples/initial-open'
 import * as Collapsible_LazyMount from '@examples/collapsible/examples/lazy-mount'
 import * as Collapsible_Nested from '@examples/collapsible/examples/nested'
@@ -93,6 +87,7 @@ import * as ColorPicker_Disabled from '@examples/color-picker/examples/disabled'
 import * as ColorPicker_FormUsage from '@examples/color-picker/examples/form-usage'
 import * as ColorPicker_Inline from '@examples/color-picker/examples/inline'
 import * as ColorPicker_InputOnly from '@examples/color-picker/examples/input-only'
+import * as ColorPicker_InsideDialog from '@examples/color-picker/examples/inside-dialog'
 import * as ColorPicker_OpenControlled from '@examples/color-picker/examples/open-controlled'
 import * as ColorPicker_RootProvider from '@examples/color-picker/examples/root-provider'
 import * as ColorPicker_SliderOnly from '@examples/color-picker/examples/slider-only'
@@ -117,24 +112,48 @@ import * as Combobox_RehydrateValue from '@examples/combobox/examples/rehydrate-
 import * as Combobox_RootProvider from '@examples/combobox/examples/root-provider'
 import * as Combobox_Virtualized from '@examples/combobox/examples/virtualized'
 import * as Combobox_WithField from '@examples/combobox/examples/with-field'
+import * as DateInput_Basic from '@examples/date-input/examples/basic'
+import * as DateInput_Controlled from '@examples/date-input/examples/controlled'
+import * as DateInput_DefaultValue from '@examples/date-input/examples/default-value'
+import * as DateInput_Disabled from '@examples/date-input/examples/disabled'
+import * as DateInput_Granularity from '@examples/date-input/examples/granularity'
+import * as DateInput_Invalid from '@examples/date-input/examples/invalid'
+import * as DateInput_LeadingZeros from '@examples/date-input/examples/leading-zeros'
+import * as DateInput_Localized from '@examples/date-input/examples/localized'
+import * as DateInput_MinMax from '@examples/date-input/examples/min-max'
+import * as DateInput_Range from '@examples/date-input/examples/range'
+import * as DateInput_ReadOnly from '@examples/date-input/examples/read-only'
+import * as DateInput_RootProvider from '@examples/date-input/examples/root-provider'
+import * as DateInput_Rtl from '@examples/date-input/examples/rtl'
+import * as DateInput_TimeOnly from '@examples/date-input/examples/time-only'
+import * as DateInput_TimeZone from '@examples/date-input/examples/time-zone'
+import * as DateInput_WithClearButton from '@examples/date-input/examples/with-clear-button'
+import * as DateInput_WithDatePicker from '@examples/date-input/examples/with-date-picker'
 import * as DatePicker_Basic from '@examples/date-picker/examples/basic'
 import * as DatePicker_Controlled from '@examples/date-picker/examples/controlled'
+import * as DatePicker_CustomCalendar from '@examples/date-picker/examples/custom-calendar'
 import * as DatePicker_DefaultValue from '@examples/date-picker/examples/default-value'
 import * as DatePicker_DefaultView from '@examples/date-picker/examples/default-view'
+import * as DatePicker_FixedWeeks from '@examples/date-picker/examples/fixed-weeks'
+import * as DatePicker_Form from '@examples/date-picker/examples/form'
 import * as DatePicker_FormatParse from '@examples/date-picker/examples/format-parse'
 import * as DatePicker_Inline from '@examples/date-picker/examples/inline'
 import * as DatePicker_Locale from '@examples/date-picker/examples/locale'
+import * as DatePicker_MaxSelectedDates from '@examples/date-picker/examples/max-selected-dates'
 import * as DatePicker_MinMax from '@examples/date-picker/examples/min-max'
 import * as DatePicker_MonthPickerRange from '@examples/date-picker/examples/month-picker-range'
 import * as DatePicker_MonthPicker from '@examples/date-picker/examples/month-picker'
 import * as DatePicker_MonthYearSelect from '@examples/date-picker/examples/month-year-select'
 import * as DatePicker_MultiSelection from '@examples/date-picker/examples/multi-selection'
 import * as DatePicker_MultipleMonths from '@examples/date-picker/examples/multiple-months'
+import * as DatePicker_OpenOnClick from '@examples/date-picker/examples/open-on-click'
 import * as DatePicker_Presets from '@examples/date-picker/examples/presets'
 import * as DatePicker_RangeSelection from '@examples/date-picker/examples/range-selection'
 import * as DatePicker_RootProvider from '@examples/date-picker/examples/root-provider'
+import * as DatePicker_SelectToday from '@examples/date-picker/examples/select-today'
 import * as DatePicker_TriggerValue from '@examples/date-picker/examples/trigger-value'
 import * as DatePicker_Unavailable from '@examples/date-picker/examples/unavailable'
+import * as DatePicker_WeekNumbers from '@examples/date-picker/examples/week-numbers'
 import * as DatePicker_WithTime from '@examples/date-picker/examples/with-time'
 import * as DatePicker_YearPickerRange from '@examples/date-picker/examples/year-picker-range'
 import * as DatePicker_YearPicker from '@examples/date-picker/examples/year-picker'
@@ -144,9 +163,12 @@ import * as Dialog_Confirmation from '@examples/dialog/examples/confirmation'
 import * as Dialog_Context from '@examples/dialog/examples/context'
 import * as Dialog_Controlled from '@examples/dialog/examples/controlled'
 import * as Dialog_FinalFocus from '@examples/dialog/examples/final-focus'
+import * as Dialog_HideMode from '@examples/dialog/examples/hide-mode'
 import * as Dialog_InitialFocus from '@examples/dialog/examples/initial-focus'
 import * as Dialog_InsideScroll from '@examples/dialog/examples/inside-scroll'
+import * as Dialog_LazyMountHideMode from '@examples/dialog/examples/lazy-mount-hide-mode'
 import * as Dialog_LazyMount from '@examples/dialog/examples/lazy-mount'
+import * as Dialog_MultipleTriggers from '@examples/dialog/examples/multiple-triggers'
 import * as Dialog_Nested from '@examples/dialog/examples/nested'
 import * as Dialog_NonModal from '@examples/dialog/examples/non-modal'
 import * as Dialog_OpenFromMenu from '@examples/dialog/examples/open-from-menu'
@@ -156,6 +178,19 @@ import * as Dialog_RootProvider from '@examples/dialog/examples/root-provider'
 import * as DownloadTrigger_Basic from '@examples/download-trigger/examples/basic'
 import * as DownloadTrigger_Svg from '@examples/download-trigger/examples/svg'
 import * as DownloadTrigger_WithPromise from '@examples/download-trigger/examples/with-promise'
+import * as Drawer_Basic from '@examples/drawer/examples/basic'
+import * as Drawer_Controlled from '@examples/drawer/examples/controlled'
+import * as Drawer_HideMode from '@examples/drawer/examples/hide-mode'
+import * as Drawer_IndentBackground from '@examples/drawer/examples/indent-background'
+import * as Drawer_Modal from '@examples/drawer/examples/modal'
+import * as Drawer_MultipleTriggers from '@examples/drawer/examples/multiple-triggers'
+import * as Drawer_Nested from '@examples/drawer/examples/nested'
+import * as Drawer_NoDragArea from '@examples/drawer/examples/no-drag-area'
+import * as Drawer_NonDraggable from '@examples/drawer/examples/non-draggable'
+import * as Drawer_RootProvider from '@examples/drawer/examples/root-provider'
+import * as Drawer_Scrollable from '@examples/drawer/examples/scrollable'
+import * as Drawer_SnapPoints from '@examples/drawer/examples/snap-points'
+import * as Drawer_SwipeDirection from '@examples/drawer/examples/swipe-direction'
 import * as Editable_Basic from '@examples/editable/examples/basic'
 import * as Editable_Context from '@examples/editable/examples/context'
 import * as Editable_Controlled from '@examples/editable/examples/controlled'
@@ -168,6 +203,7 @@ import * as Field_CustomControl from '@examples/field/examples/custom-control'
 import * as Field_Disabled from '@examples/field/examples/disabled'
 import * as Field_Input from '@examples/field/examples/input'
 import * as Field_Invalid from '@examples/field/examples/invalid'
+import * as Field_Item from '@examples/field/examples/item'
 import * as Field_RequiredIndicator from '@examples/field/examples/required-indicator'
 import * as Field_RootProvider from '@examples/field/examples/root-provider'
 import * as Field_Select from '@examples/field/examples/select'
@@ -219,6 +255,11 @@ import * as Format_NumberWithPercentage from '@examples/format/examples/number-w
 import * as Format_NumberWithUnit from '@examples/format/examples/number-with-unit'
 import * as Format_RelativeTimeBasic from '@examples/format/examples/relative-time-basic'
 import * as Format_RelativeTimeShort from '@examples/format/examples/relative-time-short'
+import * as Format_TimeBasic from '@examples/format/examples/time-basic'
+import * as Format_TimeWithAmPmLabels from '@examples/format/examples/time-with-am-pm-labels'
+import * as Format_TimeWithDate from '@examples/format/examples/time-with-date'
+import * as Format_TimeWithLocale from '@examples/format/examples/time-with-locale'
+import * as Format_TimeWithSeconds from '@examples/format/examples/time-with-seconds'
 import * as Frame_Basic from '@examples/frame/examples/basic'
 import * as Frame_InheritStyles from '@examples/frame/examples/inherit-styles'
 import * as Frame_Script from '@examples/frame/examples/script'
@@ -234,6 +275,7 @@ import * as HoverCard_Basic from '@examples/hover-card/examples/basic'
 import * as HoverCard_Context from '@examples/hover-card/examples/context'
 import * as HoverCard_Controlled from '@examples/hover-card/examples/controlled'
 import * as HoverCard_Delay from '@examples/hover-card/examples/delay'
+import * as HoverCard_MultipleTriggers from '@examples/hover-card/examples/multiple-triggers'
 import * as HoverCard_Positioning from '@examples/hover-card/examples/positioning'
 import * as HoverCard_RootProvider from '@examples/hover-card/examples/root-provider'
 import * as ImageCropper_AspectRatio from '@examples/image-cropper/examples/aspect-ratio'
@@ -292,6 +334,7 @@ import * as Menu_Links from '@examples/menu/examples/links'
 import * as Menu_MenuInDialog from '@examples/menu/examples/menu-in-dialog'
 import * as Menu_MenuItemDialog from '@examples/menu/examples/menu-item-dialog'
 import * as Menu_MultipleMenu from '@examples/menu/examples/multiple-menu'
+import * as Menu_MultipleTriggers from '@examples/menu/examples/multiple-triggers'
 import * as Menu_Nested from '@examples/menu/examples/nested'
 import * as Menu_RadioItems from '@examples/menu/examples/radio-items'
 import * as Menu_RootProvider from '@examples/menu/examples/root-provider'
@@ -347,12 +390,14 @@ import * as Popover_Factory from '@examples/popover/examples/factory'
 import * as Popover_InitialFocus from '@examples/popover/examples/initial-focus'
 import * as Popover_LazyMount from '@examples/popover/examples/lazy-mount'
 import * as Popover_Modal from '@examples/popover/examples/modal'
+import * as Popover_MultipleTriggers from '@examples/popover/examples/multiple-triggers'
 import * as Popover_Nested from '@examples/popover/examples/nested'
 import * as Popover_Positioning from '@examples/popover/examples/positioning'
 import * as Popover_RootProvider from '@examples/popover/examples/root-provider'
 import * as Popover_SameWidth from '@examples/popover/examples/same-width'
 import * as Popover_WithDialog from '@examples/popover/examples/with-dialog'
 import * as Presence_Basic from '@examples/presence/examples/basic'
+import * as Presence_HideMode from '@examples/presence/examples/hide-mode'
 import * as Presence_LazyMountAndUnmountOnExit from '@examples/presence/examples/lazy-mount-and-unmount-on-exit'
 import * as Presence_LazyMount from '@examples/presence/examples/lazy-mount'
 import * as Presence_SkipAnimationOnMount from '@examples/presence/examples/skip-animation-on-mount'
@@ -420,6 +465,7 @@ import * as Select_SelectAll from '@examples/select/examples/select-all'
 import * as Select_SelectOnHighlight from '@examples/select/examples/select-on-highlight'
 import * as Select_WithField from '@examples/select/examples/with-field'
 import * as SignaturePad_Basic from '@examples/signature-pad/examples/basic'
+import * as SignaturePad_Controlled from '@examples/signature-pad/examples/controlled'
 import * as SignaturePad_ImagePreview from '@examples/signature-pad/examples/image-preview'
 import * as SignaturePad_RootProvider from '@examples/signature-pad/examples/root-provider'
 import * as SignaturePad_WithField from '@examples/signature-pad/examples/with-field'
@@ -442,6 +488,7 @@ import * as Splitter_Collapsible from '@examples/splitter/examples/collapsible'
 import * as Splitter_Context from '@examples/splitter/examples/context'
 import * as Splitter_DynamicCollapsible from '@examples/splitter/examples/dynamic-collapsible'
 import * as Splitter_MultiplePanels from '@examples/splitter/examples/multiple-panels'
+import * as Splitter_Nested from '@examples/splitter/examples/nested'
 import * as Splitter_ResizeIndicator from '@examples/splitter/examples/resize-indicator'
 import * as Splitter_RootProvider from '@examples/splitter/examples/root-provider'
 import * as Splitter_Vertical from '@examples/splitter/examples/vertical'
@@ -449,6 +496,10 @@ import * as Steps_Basic from '@examples/steps/examples/basic'
 import * as Steps_Controlled from '@examples/steps/examples/controlled'
 import * as Steps_RootProvider from '@examples/steps/examples/root-provider'
 import * as Steps_Vertical from '@examples/steps/examples/vertical'
+import * as Swap_Fade from '@examples/swap/examples/fade'
+import * as Swap_Flip from '@examples/swap/examples/flip'
+import * as Swap_Rotate from '@examples/swap/examples/rotate'
+import * as Swap_Scale from '@examples/swap/examples/scale'
 import * as Switch_Basic from '@examples/switch/examples/basic'
 import * as Switch_Context from '@examples/switch/examples/context'
 import * as Switch_Controlled from '@examples/switch/examples/controlled'
@@ -465,6 +516,7 @@ import * as Tabs_Links from '@examples/tabs/examples/links'
 import * as Tabs_ManualActivation from '@examples/tabs/examples/manual-activation'
 import * as Tabs_RootProvider from '@examples/tabs/examples/root-provider'
 import * as Tabs_Vertical from '@examples/tabs/examples/vertical'
+import * as TagsInput_AllowDuplicates from '@examples/tags-input/examples/allow-duplicates'
 import * as TagsInput_Basic from '@examples/tags-input/examples/basic'
 import * as TagsInput_BlurBehavior from '@examples/tags-input/examples/blur-behavior'
 import * as TagsInput_ControlledInputValue from '@examples/tags-input/examples/controlled-input-value'
@@ -479,6 +531,7 @@ import * as TagsInput_PasteBehavior from '@examples/tags-input/examples/paste-be
 import * as TagsInput_ProgrammaticControl from '@examples/tags-input/examples/programmatic-control'
 import * as TagsInput_Readonly from '@examples/tags-input/examples/readonly'
 import * as TagsInput_RootProvider from '@examples/tags-input/examples/root-provider'
+import * as TagsInput_SanitizeValue from '@examples/tags-input/examples/sanitize-value'
 import * as TagsInput_Validation from '@examples/tags-input/examples/validation'
 import * as TagsInput_WithCombobox from '@examples/tags-input/examples/with-combobox'
 import * as TagsInput_WithField from '@examples/tags-input/examples/with-field'
@@ -497,10 +550,20 @@ import * as Toast_PromiseToast from '@examples/toast/examples/promise-toast'
 import * as Toast_Types from '@examples/toast/examples/types'
 import * as Toast_Update from '@examples/toast/examples/update'
 import * as Toast_VaryingHeight from '@examples/toast/examples/varying-height'
+import * as Toc_Basic from '@examples/toc/examples/basic'
+import * as Toc_Nested from '@examples/toc/examples/nested'
+import * as Toc_RootProvider from '@examples/toc/examples/root-provider'
+import * as Toc_WithCollapsible from '@examples/toc/examples/with-collapsible'
+import * as Toc_WithHover from '@examples/toc/examples/with-hover'
+import * as Toc_WithIndicator from '@examples/toc/examples/with-indicator'
+import * as Toc_WithRail from '@examples/toc/examples/with-rail'
+import * as Toc_WithSelect from '@examples/toc/examples/with-select'
+import * as Toc_WithTreeView from '@examples/toc/examples/with-tree-view'
 import * as ToggleGroup_Basic from '@examples/toggle-group/examples/basic'
 import * as ToggleGroup_Controlled from '@examples/toggle-group/examples/controlled'
 import * as ToggleGroup_Multiple from '@examples/toggle-group/examples/multiple'
 import * as ToggleGroup_RootProvider from '@examples/toggle-group/examples/root-provider'
+import * as ToggleGroup_WithTooltip from '@examples/toggle-group/examples/with-tooltip'
 import * as Toggle_Basic from '@examples/toggle/examples/basic'
 import * as Toggle_Context from '@examples/toggle/examples/context'
 import * as Toggle_Controlled from '@examples/toggle/examples/controlled'
@@ -511,6 +574,7 @@ import * as Tooltip_Basic from '@examples/tooltip/examples/basic'
 import * as Tooltip_Context from '@examples/tooltip/examples/context'
 import * as Tooltip_Controlled from '@examples/tooltip/examples/controlled'
 import * as Tooltip_Delay from '@examples/tooltip/examples/delay'
+import * as Tooltip_MultipleTriggers from '@examples/tooltip/examples/multiple-triggers'
 import * as Tooltip_Positioning from '@examples/tooltip/examples/positioning'
 import * as Tooltip_RootProvider from '@examples/tooltip/examples/root-provider'
 import * as Tooltip_WithinFixed from '@examples/tooltip/examples/within-fixed'
@@ -543,6 +607,9 @@ import * as Environment_Basic from '../../../packages/react/src/providers/enviro
 import * as Environment_Setup from '../../../packages/react/src/providers/environment/examples/setup'
 import * as Environment_ShadowRoot from '../../../packages/react/src/providers/environment/examples/shadow-root'
 import * as Environment_Usage from '../../../packages/react/src/providers/environment/examples/usage'
+import * as Interaction_FocusVisibleTextInput from '../../../packages/react/src/providers/interaction/examples/focus-visible-text-input'
+import * as Interaction_FocusVisible from '../../../packages/react/src/providers/interaction/examples/focus-visible'
+import * as Interaction_Interaction from '../../../packages/react/src/providers/interaction/examples/interaction'
 import * as Locale_Basic from '../../../packages/react/src/providers/locale/examples/basic'
 import * as Locale_Setup from '../../../packages/react/src/providers/locale/examples/setup'
 import * as Locale_Usage from '../../../packages/react/src/providers/locale/examples/usage'
@@ -574,14 +641,6 @@ const exampleModules: Record<string, ExampleModule> = {
   'avatar/events': Avatar_Events,
   'avatar/provider': Avatar_Provider,
   'avatar/root-provider': Avatar_RootProvider,
-  'bottom-sheet/basic': BottomSheet_Basic,
-  'bottom-sheet/controlled': BottomSheet_Controlled,
-  'bottom-sheet/modal': BottomSheet_Modal,
-  'bottom-sheet/no-drag-area': BottomSheet_NoDragArea,
-  'bottom-sheet/non-draggable': BottomSheet_NonDraggable,
-  'bottom-sheet/root-provider': BottomSheet_RootProvider,
-  'bottom-sheet/scrollable': BottomSheet_Scrollable,
-  'bottom-sheet/snap-points': BottomSheet_SnapPoints,
   'carousel/autoplay': Carousel_Autoplay,
   'carousel/basic': Carousel_Basic,
   'carousel/controlled': Carousel_Controlled,
@@ -604,6 +663,7 @@ const exampleModules: Record<string, ExampleModule> = {
   'checkbox/group-with-fieldset': Checkbox_GroupWithFieldset,
   'checkbox/group-with-form': Checkbox_GroupWithForm,
   'checkbox/group-with-invalid': Checkbox_GroupWithInvalid,
+  'checkbox/group-with-max-selected': Checkbox_GroupWithMaxSelected,
   'checkbox/group-with-select-all': Checkbox_GroupWithSelectAll,
   'checkbox/group': Checkbox_Group,
   'checkbox/indeterminate': Checkbox_Indeterminate,
@@ -621,6 +681,7 @@ const exampleModules: Record<string, ExampleModule> = {
   'clipboard/value-text': Clipboard_ValueText,
   'collapsible/basic': Collapsible_Basic,
   'collapsible/disabled': Collapsible_Disabled,
+  'collapsible/hide-mode': Collapsible_HideMode,
   'collapsible/initial-open': Collapsible_InitialOpen,
   'collapsible/lazy-mount': Collapsible_LazyMount,
   'collapsible/nested': Collapsible_Nested,
@@ -641,6 +702,7 @@ const exampleModules: Record<string, ExampleModule> = {
   'color-picker/form-usage': ColorPicker_FormUsage,
   'color-picker/inline': ColorPicker_Inline,
   'color-picker/input-only': ColorPicker_InputOnly,
+  'color-picker/inside-dialog': ColorPicker_InsideDialog,
   'color-picker/open-controlled': ColorPicker_OpenControlled,
   'color-picker/root-provider': ColorPicker_RootProvider,
   'color-picker/slider-only': ColorPicker_SliderOnly,
@@ -665,24 +727,48 @@ const exampleModules: Record<string, ExampleModule> = {
   'combobox/root-provider': Combobox_RootProvider,
   'combobox/virtualized': Combobox_Virtualized,
   'combobox/with-field': Combobox_WithField,
+  'date-input/basic': DateInput_Basic,
+  'date-input/controlled': DateInput_Controlled,
+  'date-input/default-value': DateInput_DefaultValue,
+  'date-input/disabled': DateInput_Disabled,
+  'date-input/granularity': DateInput_Granularity,
+  'date-input/invalid': DateInput_Invalid,
+  'date-input/leading-zeros': DateInput_LeadingZeros,
+  'date-input/localized': DateInput_Localized,
+  'date-input/min-max': DateInput_MinMax,
+  'date-input/range': DateInput_Range,
+  'date-input/read-only': DateInput_ReadOnly,
+  'date-input/root-provider': DateInput_RootProvider,
+  'date-input/rtl': DateInput_Rtl,
+  'date-input/time-only': DateInput_TimeOnly,
+  'date-input/time-zone': DateInput_TimeZone,
+  'date-input/with-clear-button': DateInput_WithClearButton,
+  'date-input/with-date-picker': DateInput_WithDatePicker,
   'date-picker/basic': DatePicker_Basic,
   'date-picker/controlled': DatePicker_Controlled,
+  'date-picker/custom-calendar': DatePicker_CustomCalendar,
   'date-picker/default-value': DatePicker_DefaultValue,
   'date-picker/default-view': DatePicker_DefaultView,
+  'date-picker/fixed-weeks': DatePicker_FixedWeeks,
+  'date-picker/form': DatePicker_Form,
   'date-picker/format-parse': DatePicker_FormatParse,
   'date-picker/inline': DatePicker_Inline,
   'date-picker/locale': DatePicker_Locale,
+  'date-picker/max-selected-dates': DatePicker_MaxSelectedDates,
   'date-picker/min-max': DatePicker_MinMax,
   'date-picker/month-picker-range': DatePicker_MonthPickerRange,
   'date-picker/month-picker': DatePicker_MonthPicker,
   'date-picker/month-year-select': DatePicker_MonthYearSelect,
   'date-picker/multi-selection': DatePicker_MultiSelection,
   'date-picker/multiple-months': DatePicker_MultipleMonths,
+  'date-picker/open-on-click': DatePicker_OpenOnClick,
   'date-picker/presets': DatePicker_Presets,
   'date-picker/range-selection': DatePicker_RangeSelection,
   'date-picker/root-provider': DatePicker_RootProvider,
+  'date-picker/select-today': DatePicker_SelectToday,
   'date-picker/trigger-value': DatePicker_TriggerValue,
   'date-picker/unavailable': DatePicker_Unavailable,
+  'date-picker/week-numbers': DatePicker_WeekNumbers,
   'date-picker/with-time': DatePicker_WithTime,
   'date-picker/year-picker-range': DatePicker_YearPickerRange,
   'date-picker/year-picker': DatePicker_YearPicker,
@@ -692,9 +778,12 @@ const exampleModules: Record<string, ExampleModule> = {
   'dialog/context': Dialog_Context,
   'dialog/controlled': Dialog_Controlled,
   'dialog/final-focus': Dialog_FinalFocus,
+  'dialog/hide-mode': Dialog_HideMode,
   'dialog/initial-focus': Dialog_InitialFocus,
   'dialog/inside-scroll': Dialog_InsideScroll,
+  'dialog/lazy-mount-hide-mode': Dialog_LazyMountHideMode,
   'dialog/lazy-mount': Dialog_LazyMount,
+  'dialog/multiple-triggers': Dialog_MultipleTriggers,
   'dialog/nested': Dialog_Nested,
   'dialog/non-modal': Dialog_NonModal,
   'dialog/open-from-menu': Dialog_OpenFromMenu,
@@ -704,6 +793,19 @@ const exampleModules: Record<string, ExampleModule> = {
   'download-trigger/basic': DownloadTrigger_Basic,
   'download-trigger/svg': DownloadTrigger_Svg,
   'download-trigger/with-promise': DownloadTrigger_WithPromise,
+  'drawer/basic': Drawer_Basic,
+  'drawer/controlled': Drawer_Controlled,
+  'drawer/hide-mode': Drawer_HideMode,
+  'drawer/indent-background': Drawer_IndentBackground,
+  'drawer/modal': Drawer_Modal,
+  'drawer/multiple-triggers': Drawer_MultipleTriggers,
+  'drawer/nested': Drawer_Nested,
+  'drawer/no-drag-area': Drawer_NoDragArea,
+  'drawer/non-draggable': Drawer_NonDraggable,
+  'drawer/root-provider': Drawer_RootProvider,
+  'drawer/scrollable': Drawer_Scrollable,
+  'drawer/snap-points': Drawer_SnapPoints,
+  'drawer/swipe-direction': Drawer_SwipeDirection,
   'editable/basic': Editable_Basic,
   'editable/context': Editable_Context,
   'editable/controlled': Editable_Controlled,
@@ -716,6 +818,7 @@ const exampleModules: Record<string, ExampleModule> = {
   'field/disabled': Field_Disabled,
   'field/input': Field_Input,
   'field/invalid': Field_Invalid,
+  'field/item': Field_Item,
   'field/required-indicator': Field_RequiredIndicator,
   'field/root-provider': Field_RootProvider,
   'field/select': Field_Select,
@@ -767,6 +870,11 @@ const exampleModules: Record<string, ExampleModule> = {
   'format/number-with-unit': Format_NumberWithUnit,
   'format/relative-time-basic': Format_RelativeTimeBasic,
   'format/relative-time-short': Format_RelativeTimeShort,
+  'format/time-basic': Format_TimeBasic,
+  'format/time-with-am-pm-labels': Format_TimeWithAmPmLabels,
+  'format/time-with-date': Format_TimeWithDate,
+  'format/time-with-locale': Format_TimeWithLocale,
+  'format/time-with-seconds': Format_TimeWithSeconds,
   'frame/basic': Frame_Basic,
   'frame/inherit-styles': Frame_InheritStyles,
   'frame/script': Frame_Script,
@@ -782,6 +890,7 @@ const exampleModules: Record<string, ExampleModule> = {
   'hover-card/context': HoverCard_Context,
   'hover-card/controlled': HoverCard_Controlled,
   'hover-card/delay': HoverCard_Delay,
+  'hover-card/multiple-triggers': HoverCard_MultipleTriggers,
   'hover-card/positioning': HoverCard_Positioning,
   'hover-card/root-provider': HoverCard_RootProvider,
   'image-cropper/aspect-ratio': ImageCropper_AspectRatio,
@@ -840,6 +949,7 @@ const exampleModules: Record<string, ExampleModule> = {
   'menu/menu-in-dialog': Menu_MenuInDialog,
   'menu/menu-item-dialog': Menu_MenuItemDialog,
   'menu/multiple-menu': Menu_MultipleMenu,
+  'menu/multiple-triggers': Menu_MultipleTriggers,
   'menu/nested': Menu_Nested,
   'menu/radio-items': Menu_RadioItems,
   'menu/root-provider': Menu_RootProvider,
@@ -895,12 +1005,14 @@ const exampleModules: Record<string, ExampleModule> = {
   'popover/initial-focus': Popover_InitialFocus,
   'popover/lazy-mount': Popover_LazyMount,
   'popover/modal': Popover_Modal,
+  'popover/multiple-triggers': Popover_MultipleTriggers,
   'popover/nested': Popover_Nested,
   'popover/positioning': Popover_Positioning,
   'popover/root-provider': Popover_RootProvider,
   'popover/same-width': Popover_SameWidth,
   'popover/with-dialog': Popover_WithDialog,
   'presence/basic': Presence_Basic,
+  'presence/hide-mode': Presence_HideMode,
   'presence/lazy-mount-and-unmount-on-exit': Presence_LazyMountAndUnmountOnExit,
   'presence/lazy-mount': Presence_LazyMount,
   'presence/skip-animation-on-mount': Presence_SkipAnimationOnMount,
@@ -968,6 +1080,7 @@ const exampleModules: Record<string, ExampleModule> = {
   'select/select-on-highlight': Select_SelectOnHighlight,
   'select/with-field': Select_WithField,
   'signature-pad/basic': SignaturePad_Basic,
+  'signature-pad/controlled': SignaturePad_Controlled,
   'signature-pad/image-preview': SignaturePad_ImagePreview,
   'signature-pad/root-provider': SignaturePad_RootProvider,
   'signature-pad/with-field': SignaturePad_WithField,
@@ -990,6 +1103,7 @@ const exampleModules: Record<string, ExampleModule> = {
   'splitter/context': Splitter_Context,
   'splitter/dynamic-collapsible': Splitter_DynamicCollapsible,
   'splitter/multiple-panels': Splitter_MultiplePanels,
+  'splitter/nested': Splitter_Nested,
   'splitter/resize-indicator': Splitter_ResizeIndicator,
   'splitter/root-provider': Splitter_RootProvider,
   'splitter/vertical': Splitter_Vertical,
@@ -997,6 +1111,10 @@ const exampleModules: Record<string, ExampleModule> = {
   'steps/controlled': Steps_Controlled,
   'steps/root-provider': Steps_RootProvider,
   'steps/vertical': Steps_Vertical,
+  'swap/fade': Swap_Fade,
+  'swap/flip': Swap_Flip,
+  'swap/rotate': Swap_Rotate,
+  'swap/scale': Swap_Scale,
   'switch/basic': Switch_Basic,
   'switch/context': Switch_Context,
   'switch/controlled': Switch_Controlled,
@@ -1013,6 +1131,7 @@ const exampleModules: Record<string, ExampleModule> = {
   'tabs/manual-activation': Tabs_ManualActivation,
   'tabs/root-provider': Tabs_RootProvider,
   'tabs/vertical': Tabs_Vertical,
+  'tags-input/allow-duplicates': TagsInput_AllowDuplicates,
   'tags-input/basic': TagsInput_Basic,
   'tags-input/blur-behavior': TagsInput_BlurBehavior,
   'tags-input/controlled-input-value': TagsInput_ControlledInputValue,
@@ -1027,6 +1146,7 @@ const exampleModules: Record<string, ExampleModule> = {
   'tags-input/programmatic-control': TagsInput_ProgrammaticControl,
   'tags-input/readonly': TagsInput_Readonly,
   'tags-input/root-provider': TagsInput_RootProvider,
+  'tags-input/sanitize-value': TagsInput_SanitizeValue,
   'tags-input/validation': TagsInput_Validation,
   'tags-input/with-combobox': TagsInput_WithCombobox,
   'tags-input/with-field': TagsInput_WithField,
@@ -1045,10 +1165,20 @@ const exampleModules: Record<string, ExampleModule> = {
   'toast/types': Toast_Types,
   'toast/update': Toast_Update,
   'toast/varying-height': Toast_VaryingHeight,
+  'toc/basic': Toc_Basic,
+  'toc/nested': Toc_Nested,
+  'toc/root-provider': Toc_RootProvider,
+  'toc/with-collapsible': Toc_WithCollapsible,
+  'toc/with-hover': Toc_WithHover,
+  'toc/with-indicator': Toc_WithIndicator,
+  'toc/with-rail': Toc_WithRail,
+  'toc/with-select': Toc_WithSelect,
+  'toc/with-tree-view': Toc_WithTreeView,
   'toggle-group/basic': ToggleGroup_Basic,
   'toggle-group/controlled': ToggleGroup_Controlled,
   'toggle-group/multiple': ToggleGroup_Multiple,
   'toggle-group/root-provider': ToggleGroup_RootProvider,
+  'toggle-group/with-tooltip': ToggleGroup_WithTooltip,
   'toggle/basic': Toggle_Basic,
   'toggle/context': Toggle_Context,
   'toggle/controlled': Toggle_Controlled,
@@ -1059,6 +1189,7 @@ const exampleModules: Record<string, ExampleModule> = {
   'tooltip/context': Tooltip_Context,
   'tooltip/controlled': Tooltip_Controlled,
   'tooltip/delay': Tooltip_Delay,
+  'tooltip/multiple-triggers': Tooltip_MultipleTriggers,
   'tooltip/positioning': Tooltip_Positioning,
   'tooltip/root-provider': Tooltip_RootProvider,
   'tooltip/within-fixed': Tooltip_WithinFixed,
@@ -1091,6 +1222,9 @@ const exampleModules: Record<string, ExampleModule> = {
   'environment/setup': Environment_Setup,
   'environment/shadow-root': Environment_ShadowRoot,
   'environment/usage': Environment_Usage,
+  'interaction/focus-visible-text-input': Interaction_FocusVisibleTextInput,
+  'interaction/focus-visible': Interaction_FocusVisible,
+  'interaction/interaction': Interaction_Interaction,
   'locale/basic': Locale_Basic,
   'locale/setup': Locale_Setup,
   'locale/usage': Locale_Usage,

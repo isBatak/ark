@@ -8,6 +8,16 @@ export interface RootProps {
    */
   closeOnSelect?: boolean
   /**
+   * A function that creates a Calendar object for a given calendar identifier.
+   * Enables non-Gregorian calendar support (Persian, Buddhist, Islamic, etc.)
+   * without bundling all calendars by default.
+   *
+   * @example
+   * import { createCalendar } from "@internationalized/date"
+   * { locale: "fa-IR", createCalendar }
+   */
+  createCalendar?: (identifier: datePicker.CalendarIdentifier) => datePicker.Calendar
+  /**
    * The initial focused date when rendered.
    * Use when you don't need to control the focused date of the date picker.
    */
@@ -85,6 +95,11 @@ export interface RootProps {
    */
   max?: datePicker.DateValue
   /**
+   * The maximum number of dates that can be selected.
+   * This is only applicable when `selectionMode` is `multiple`.
+   */
+  maxSelectedDates?: number
+  /**
    * The maximum view of the calendar
    * @default "year"
    */
@@ -115,6 +130,11 @@ export interface RootProps {
    */
   open?: boolean
   /**
+   * Whether to open the calendar when the input is clicked.
+   * @default false
+   */
+  openOnClick?: boolean
+  /**
    * Whether day outside the visible range can be selected.
    * @default false
    */
@@ -144,6 +164,10 @@ export interface RootProps {
    * @default "single"
    */
   selectionMode?: datePicker.SelectionMode
+  /**
+   * Whether to show the week number column in the day view.
+   */
+  showWeekNumbers?: boolean
   /**
    * The first day of the week.
    *  `0` - Sunday

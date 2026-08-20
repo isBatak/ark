@@ -1,7 +1,7 @@
 // Credit to the Radix Vue team: https://github.com/radix-vue/radix-vue/blob/main/packages/radix-vue/src/shared/useForwardExpose.ts
 
 import { type ComponentPublicInstance, computed, getCurrentInstance, ref } from 'vue'
-import { unrefElement } from './unref-element'
+import { unrefElement } from './unref-element.ts'
 
 const isElement = (el: any): el is Element =>
   // biome-ignore lint/suspicious/noPrototypeBuiltins: <explanation>
@@ -62,13 +62,13 @@ export function useForwardExpose() {
   function forwardRef(ref: Element | ComponentPublicInstance | null) {
     currentRef.value = ref
 
-    if (isElement(ref) || !ref) return
+    if (!ref) return
 
     // retrieve the forwarded element
     Object.defineProperty(ret, '$el', {
       enumerable: true,
       configurable: true,
-      get: () => ref.$el,
+      get: () => (isElement(ref) ? ref : ref.$el),
     })
 
     instance.exposed = ret

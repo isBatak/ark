@@ -1,3 +1,14 @@
+export type {
+  DateRangePreset,
+  DateValue,
+  DateView,
+  FocusChangeDetails,
+  OpenChangeDetails,
+  SelectionMode,
+  ValueChangeDetails,
+  ViewChangeDetails,
+  VisibleRangeChangeDetails,
+} from '@zag-js/date-picker'
 export {
   default as ClearTrigger,
   type DatePickerClearTriggerBaseProps as ClearTriggerBaseProps,
@@ -125,6 +136,16 @@ export {
   type DatePickerViewTriggerBaseProps as ViewTriggerBaseProps,
   type DatePickerViewTriggerProps as ViewTriggerProps,
 } from './date-picker-view-trigger.svelte'
+export {
+  default as WeekNumberCell,
+  type DatePickerWeekNumberCellBaseProps as WeekNumberCellBaseProps,
+  type DatePickerWeekNumberCellProps as WeekNumberCellProps,
+} from './date-picker-week-number-cell.svelte'
+export {
+  default as WeekNumberHeaderCell,
+  type DatePickerWeekNumberHeaderCellBaseProps as WeekNumberHeaderCellBaseProps,
+  type DatePickerWeekNumberHeaderCellProps as WeekNumberHeaderCellProps,
+} from './date-picker-week-number-header-cell.svelte'
 export {
   default as YearSelect,
   type DatePickerYearSelectBaseProps as YearSelectBaseProps,

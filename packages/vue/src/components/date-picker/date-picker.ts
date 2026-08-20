@@ -1,9 +1,13 @@
 export type {
+  DateRangePreset,
   DateValue,
+  DateView,
   FocusChangeDetails,
   OpenChangeDetails,
+  SelectionMode,
   ValueChangeDetails,
   ViewChangeDetails,
+  VisibleRangeChangeDetails,
 } from '@zag-js/date-picker'
 export {
   default as ClearTrigger,
@@ -133,6 +137,16 @@ export {
   type DatePickerViewProps as ViewProps,
   type DatePickerViewBaseProps as ViewBaseProps,
 } from './date-picker-view.vue'
+export {
+  default as WeekNumberHeaderCell,
+  type DatePickerWeekNumberHeaderCellBaseProps as WeekNumberHeaderCellBaseProps,
+  type DatePickerWeekNumberHeaderCellProps as WeekNumberHeaderCellProps,
+} from './date-picker-week-number-header-cell.vue'
+export {
+  default as WeekNumberCell,
+  type DatePickerWeekNumberCellBaseProps as WeekNumberCellBaseProps,
+  type DatePickerWeekNumberCellProps as WeekNumberCellProps,
+} from './date-picker-week-number-cell.vue'
 export {
   default as YearSelect,
   type DatePickerYearSelectProps as YearSelectProps,
